@@ -1,20 +1,17 @@
 version: 0.2
-
 phases:
   install:
     commands:
-      - echo Installing Node.js dependencies
-      - npm install
+      - echo "No dependencies to install"
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
+      - echo "Building static site"
   post_build:
     commands:
-      - echo Build completed on `date`
-
+      - echo "Build completed"
 artifacts:
   files:
-    - '**/*'
-  base-directory: build
-  discard-paths: yes
+    - '**/*'  # Include all files from your repository
+  base-directory: build  # If you have a build folder
+  discard-paths: no
+
